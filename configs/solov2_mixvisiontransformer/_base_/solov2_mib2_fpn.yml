@@ -16,7 +16,7 @@ SOLOv2:
 
 # 这里新建新的backbone的信息输入
 MixVisionTransformer_B2:
-  pretrained: /home/kb/MyProjects/MultiModalInstanceSeg/PaddleSeg/pretrained_models/SegFormer_B2/model.pdparams
+  pretrained: /data/net/dl_data/ProjectDatasets_bkx/paddle_pretrained_models/SegFormer_B2/model.pdparams
 
 
 FPN:
