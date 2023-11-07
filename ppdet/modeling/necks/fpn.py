@@ -28,6 +28,8 @@ __all__ = ['FPN']
 @serializable
 class FPN(nn.Layer):
     """
+    特征金字塔网络（Feature Pyramid Network, FPN）的实现，
+    它常用于目标检测任务中，通过融合不同层次的特征图来提高小目标的检测能力
     Feature Pyramid Network, see https://arxiv.org/abs/1612.03144
 
     Args:

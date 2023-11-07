@@ -573,7 +573,7 @@ class ResNet(nn.Layer):
             for i in self.return_idx
         ]
 
-    def forward(self, inputs):
+    def forward(self, inputs):  # {dict:5}'im_id':tensor(1,1);'curr_iter':tensor(1,);'image':tensor(1,3,800,1216);'im_shape':tensor(1,2);'scale_factor':tensor(1,2)
         x = inputs['image']
         conv1 = self.conv1(x)
         x = F.max_pool2d(conv1, kernel_size=3, stride=2, padding=1)
@@ -582,7 +582,7 @@ class ResNet(nn.Layer):
             x = stage(x)
             if idx in self.return_idx:
                 outs.append(x)
-        return outs
+        return outs  # {list:4}[tensor(1,256,200,304),(1,512,100,152),(1,1024,50,76),(1,2048,25,38)]  1/4 1/8 1/16 1/32
 
 
 @register

@@ -5,4 +5,4 @@ _BASE_: [
   '_base_/optimizer_1x.yml',
   '_base_/solov2_reader.yml',
 ]
-weights: output/solov2_r50_fpn_1x_coco/model_final
+weights: /home/kb/MyProjects/MultiModalInstanceSeg/PaddleDetection/pretrained_models/solov2/solov2_r50_fpn_1x_coco.pdparams # output/solov2_r50_fpn_1x_coco/model_final

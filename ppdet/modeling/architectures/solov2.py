@@ -64,6 +64,7 @@ class SOLOv2(BaseArch):
         }
 
     def model_arch(self):
+        # self.inputs是{dict:5},body_feats是{list:4}
         body_feats = self.backbone(self.inputs)
 
         body_feats = self.neck(body_feats)
