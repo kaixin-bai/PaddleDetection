@@ -262,6 +262,8 @@ class OverlapPatchEmbed(nn.Layer):
         return x, H, W
 
 
+@register
+@serializable
 class MixVisionTransformer(nn.Layer):
     def __init__(self,
                  img_size=224,
