@@ -2,8 +2,8 @@ architecture: SOLOv2
 pretrain_weights:    # https://paddledet.bj.bcebos.com/models/pretrained/ResNet50_cos_pretrained.pdparams 这里设置预训练模型为空
 
 SOLOv2:
-  backbone: MixVisionTransformer_B2   # 这部分的backbone位于backbones/mix_transformer.py
-  neck: FPN
+  backbone: MixVisionTransformer_B0   # 这部分的backbone位于backbones/mix_transformer.py
+  neck: CAN
   solov2_head: SOLOv2Head
   mask_head: SOLOv2MaskHead
 
@@ -16,10 +16,10 @@ SOLOv2:
 
 # 这里新建新的backbone的信息输入
 MixVisionTransformer_B2:
-  pretrained: /data/net/dl_data/ProjectDatasets_bkx/paddle_pretrained_models/SegFormer_B2/model.pdparams
+  pretrained: /data/net/dl_data/ProjectDatasets_bkx/paddle_pretrained_models/SegFormer_B0/model.pdparams
 
 
-FPN:
+CAN:
   extra_stage: 1
   out_channel: 256
 
